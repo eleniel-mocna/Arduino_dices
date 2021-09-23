@@ -342,7 +342,7 @@ struct DnD
         }
     }
 
-    void Button2(long unsigned int current_time)
+    void Button2()
     {
         if (state == DnDState::NORMAL)
         {
@@ -356,7 +356,7 @@ struct DnD
         }
     }
 
-    void Button3(long unsigned int current_time)
+    void Button3()
     {
         if (state == DnDState::NORMAL)
         {
@@ -393,8 +393,8 @@ void loop()
     else
         core.Button1U(current_time);
     if (b2.Check(current_time))
-        core.Button2(current_time);
+        core.Button2();
     if (b3.Check(current_time))
-        core.Button3(current_time);
+        core.Button3();
     d.Update();
 }
